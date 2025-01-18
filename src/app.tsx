@@ -1,7 +1,9 @@
+import { ExperienceBar } from "./components/experience-bar";
+
 export function App() {
   return (
-    <h1>
-      Hello NLW
-    </h1>
+    <main className="container">
+      <ExperienceBar />
+    </main>
   )
 }
