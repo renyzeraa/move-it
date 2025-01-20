@@ -14,7 +14,5 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 6.25rem;
   align-content: center;
-}
-
-.leftContainer {
+  margin-top: 4rem;
 }

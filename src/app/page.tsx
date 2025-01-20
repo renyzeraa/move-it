@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import styles from '../styles/pages/home.module.css'
 import { CompletedChallenges } from "@/components/completed-challenges";
 import { Countdown } from "@/components/countdown";
+import { ChallengeBox } from "@/components/challenge-box";
 
 export const metadata: Metadata = {
   title: "Início | move.it"
@@ -20,7 +21,7 @@ export default function Home() {
           <Countdown />
         </div>
         <div>
-
+          <ChallengeBox />
         </div>
       </section>
     </main>
