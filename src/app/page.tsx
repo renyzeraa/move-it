@@ -3,9 +3,10 @@ import { Profile } from "@/components/profile";
 import { Metadata } from "next";
 import styles from '../styles/pages/home.module.css'
 import { CompletedChallenges } from "@/components/completed-challenges";
+import { Countdown } from "@/components/countdown";
 
 export const metadata: Metadata = {
-  title: "Move.it | Index"
+  title: "Início | move.it"
 };
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <div>
           <Profile />
           <CompletedChallenges />
+          <Countdown />
         </div>
         <div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Rajdhani } from "next/font/google";
 import "../styles/global.css";
 import Head from "next/head";
+import { IconURL } from "next/dist/lib/metadata/types/metadata-types";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,7 +16,7 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "Move.it"
+  title: "Move.it",
 };
 
 export default function RootLayout({
@@ -25,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <Head>
-        <link rel="shortcut icon" href="../../public/favicon.png" type="image/x-icon" />
-      </Head>
+      <link rel="shortcut icon" href="favicon.png" type="image/png" />
       <body className={`${inter.variable} ${rajdhani.variable}`}>
         {children}
       </body>
