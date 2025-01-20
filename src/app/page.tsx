@@ -1,10 +1,22 @@
 import { ExperienceBar } from "@/components/experience-bar";
+import { Profile } from "@/components/profile";
+import { Metadata } from "next";
+import styles from '../styles/pages/home.module.css'
+
+export const metadata: Metadata = {
+  title: "Move.it | Index"
+};
 
 export default function Home() {
   return (
-    <main className="container">
+    <main className={styles.container}>
       <ExperienceBar />
-      <h1>Hello World</h1>
+      <section className={styles.homeContainer}>
+        <Profile />
+        <div>
+
+        </div>
+      </section>
     </main>
   )
 }
