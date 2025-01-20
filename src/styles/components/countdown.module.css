@@ -75,6 +75,17 @@
 
 .countdownButton[data-state='check'] {
   cursor: not-allowed;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdownButton[data-state='check']:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--green);
 }
 
 .countdownButton[data-state='close']:hover {
