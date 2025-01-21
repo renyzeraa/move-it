@@ -1,3 +1,5 @@
+'use client';
+
 import { ChallengesProvider } from "@/contexts/challenges-context";
 import { Profile } from "@/components/profile";
 import { ExperienceBar } from "@/components/experience-bar";
