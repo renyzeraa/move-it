@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Rajdhani } from "next/font/google";
 import "../styles/global.css";
-import Head from "next/head";
-import { IconURL } from "next/dist/lib/metadata/types/metadata-types";
 
 const inter = Inter({
   variable: "--font-inter",

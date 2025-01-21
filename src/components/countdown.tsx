@@ -1,12 +1,15 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import styles from '../styles/components/countdown.module.css'
+import { ChallengesContext } from '@/contexts/challenges-context';
 
 let countdownTimeout: NodeJS.Timeout;
 const initialTime = 0.1 * 60;
 
 export function Countdown() {
+  const { startNewChallenge } = useContext(ChallengesContext);
+
   const [time, setTime] = useState(initialTime);
   const [active, setActive] = useState(false);
   const [hasFinished, setHasFinished] = useState(false);
@@ -33,11 +36,12 @@ export function Countdown() {
         setTime(time - 1)
       }, 1000)
     }
-    if (active && time <= 0) {
+    else if (active && time === 0) {
       setHasFinished(true)
       setActive(false)
+      startNewChallenge();
     }
-  }, [active, time])
+  }, [active, time]);
 
   return (
     <div>

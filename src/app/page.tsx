@@ -1,29 +1,27 @@
-import { ExperienceBar } from "@/components/experience-bar";
+import { ChallengesProvider } from "@/contexts/challenges-context";
 import { Profile } from "@/components/profile";
-import { Metadata } from "next";
-import styles from '../styles/pages/home.module.css'
+import { ExperienceBar } from "@/components/experience-bar";
 import { CompletedChallenges } from "@/components/completed-challenges";
 import { Countdown } from "@/components/countdown";
 import { ChallengeBox } from "@/components/challenge-box";
-
-export const metadata: Metadata = {
-  title: "Início | move.it"
-};
+import styles from "../styles/pages/home.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.container}>
-      <ExperienceBar />
-      <section className={styles.homeContainer}>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
-    </main>
-  )
+    <ChallengesProvider>
+      <main className={styles.container}>
+        <ExperienceBar />
+        <section className={styles.homeContainer}>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </main>
+    </ChallengesProvider>
+  );
 }
