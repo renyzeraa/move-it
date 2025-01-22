@@ -21,10 +21,10 @@ export default function Home() {
               <CompletedChallenges />
               <Countdown />
             </div>
+            <div>
+              <ChallengeBox />
+            </div>
           </CountdownProvider>
-          <div>
-            <ChallengeBox />
-          </div>
         </section>
       </main>
     </ChallengesProvider>
