@@ -5,7 +5,7 @@ import styles from '../styles/components/challenge-box.module.css'
 import { useContext } from 'react';
 
 export function ChallengeBox() {
-  const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
+  const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
   const srcIcon = `/icons/${activeChallenge?.type}.svg`
 
   return (
@@ -31,6 +31,7 @@ export function ChallengeBox() {
             <button
               type='button'
               className={styles.challengeSucceededButton}
+              onClick={completeChallenge}
             >
               Completei
             </button>
