@@ -101,3 +101,14 @@
 .countdownButton[data-state='check'] {
   gap: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .countdownContainer > div {
+    font-size: 5.75rem;
+  }
+
+  .countdownButton {
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+}
