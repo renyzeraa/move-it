@@ -33,6 +33,22 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
 
+## 📝 Hospedagem
+
+Este projeto esta hospedado na vercel
+
+Comandos para fazer o deploy em staging
+
+```
+vercel
+```
+
+Deploy em produção
+
+```
+vercel --prod
+```
+
 ---
 
 <img align="left" src="https://avatars.githubusercontent.com/renyzeraa?size=100">
