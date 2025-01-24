@@ -1,4 +1,4 @@
-'use client';
+"use client"
 
 import { ChallengesProvider } from "@/contexts/challenges-context";
 import { Profile } from "@/components/profile";

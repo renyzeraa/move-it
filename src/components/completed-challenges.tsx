@@ -1,3 +1,5 @@
+"use client"
+
 import { useContext } from 'react';
 import styles from '../styles/components/completedChallenges.module.css'
 import { ChallengesContext } from '@/contexts/challenges-context';
